@@ -137,7 +137,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/rjptegelaar/liquid-talend-esb-interceptor.git</connection>
 		<developerConnection>scm:git:git@github.com:rjptegelaar/liquid-talend-esb-interceptor.git</developerConnection>
-		<url>https://github.com/rjptegelaar/v.git</url>
+		<url>https://github.com/rjptegelaar/liquid-talend-esb-interceptor.git</url>
 	  <tag>HEAD</tag>
   </scm>
 	<distributionManagement>
