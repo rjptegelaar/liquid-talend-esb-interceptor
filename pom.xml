@@ -108,7 +108,7 @@
 							<formats>
 								<format>zip</format>
 							</formats>
-							<finalName>tLiquidInterceptor</finalName>
+							<finalName>cLiquidInterceptor</finalName>
 							<appendAssemblyId>false</appendAssemblyId>
 						</configuration>
 					</execution>
