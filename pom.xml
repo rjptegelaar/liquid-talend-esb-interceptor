@@ -10,7 +10,7 @@
 		<version>0.0.2-SNAPSHOT</version>
 	</parent>
 	<build>
-		<finalName>tSonicContainerRestarter</finalName>
+		<finalName>cLiquidInterceptor</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -108,6 +108,8 @@
 							<formats>
 								<format>zip</format>
 							</formats>
+							<finalName>tLiquidInterceptor</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
 						</configuration>
 					</execution>
 				</executions>
