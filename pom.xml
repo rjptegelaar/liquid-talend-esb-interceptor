@@ -4,13 +4,17 @@
 	<artifactId>liquid-talend-esb-interceptor</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
 	<name>liquid-talend-esb-interceptor</name>
+	<parent>
+		<groupId>com.pte.liquid.relay</groupId>
+		<artifactId>liquid-parent</artifactId>
+		<version>0.0.2-SNAPSHOT</version>
+	</parent>
 	<build>
 		<finalName>tSonicContainerRestarter</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.1</version>
 				<configuration>
 					<outputXML>true</outputXML>
 				</configuration>
@@ -31,7 +35,6 @@
 			<plugin>
 				<groupId>com.google.code.maven-replacer-plugin</groupId>
 				<artifactId>replacer</artifactId>
-				<version>1.5.3</version>
 				<executions>
 					<execution>
 						<phase>prepare-package</phase>
@@ -90,7 +93,6 @@
 				</configuration>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.3</version>
 				<executions>
 					<execution>
 						<id>talend</id>
@@ -112,7 +114,6 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-release-plugin</artifactId>	
-				<version>2.5.2</version>
   	                <configuration>  	                
   	                    <autoVersionSubmodules>true</autoVersionSubmodules>  	                    
   	                    <remoteTagging>true</remoteTagging>
@@ -125,12 +126,11 @@
 		<dependency>
 			<groupId>com.pte.liquid.relay</groupId>
 			<artifactId>liquid-relay-camel</artifactId>
-			<version>0.0.5</version>
+			<version>0.0.6-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>aopalliance</groupId>
 			<artifactId>aopalliance</artifactId>
-			<version>1.0</version>
 		</dependency>
 	</dependencies>
 	<packaging>pom</packaging>
