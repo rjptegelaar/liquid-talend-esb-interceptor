@@ -17,6 +17,17 @@
 			MIN_OUTPUT="0" />
 	</CONNECTORS>
 	<PARAMETERS>
+		<PARAMETER NAME="Logging" FIELD="CLOSED_LIST" NUM_ROW="1">
+    		<ITEMS DEFAULT="Enabled">
+	            <ITEM NAME="Enabled" VALUE="0"/>
+	            <ITEM NAME="Disabled" VALUE="1"/>
+	            <ITEM NAME="Custom" VALUE="2"/>
+	         </ITEMS>
+    	</PARAMETER>
+    	<PARAMETER NAME="ContextValue" FIELD="TEXT" NUM_ROW="2"
+			SHOW_IF="Logging == 'Custom')">
+			
+		</PARAMETER>
 	</PARAMETERS>
 	<ADVANCED_PARAMETERS>
 		<PARAMETER FIELD="TEXT" NAME="Hostname" NUM_ROW="1"
