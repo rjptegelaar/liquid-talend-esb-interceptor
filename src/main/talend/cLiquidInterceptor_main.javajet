@@ -29,11 +29,28 @@
 	String destination = ElementParameterParser.getValue(node, "__Destination__");
 	String hostname = ElementParameterParser.getValue(node, "__Hostname__");
 	String port = ElementParameterParser.getValue(node, "__Port__");
+	int logging = Integer.parseInt(ElementParameterParser.getValue(node, "__Logging__"));
 	
-	String uri = "liquid://?destination=" + destination.replaceAll("^\"|\"$", "") + "&hostname=" + hostname.replaceAll("^\"|\"$", "") + "&port=" + port.replaceAll("^\"|\"$", "");
+	boolean enabled = false;
+	
+	
+	switch(logging) {
+		case 0:
+			enabled = true;
+		break;
+		case 1:
+			enabled = false;
+		break;
+		case 2:		
+			String contextValue = ElementParameterParser.getValue(node, "__ContextValue__");		
+			enabled = Boolean.parseBoolean(contextValue);
+		break;		
+	}
+	
+	
+	String uri = "liquid://?enabled="+ enabled +"&destination=" + destination.replaceAll("^\"|\"$", "") + "&hostname=" + hostname.replaceAll("^\"|\"$", "") + "&port=" + port.replaceAll("^\"|\"$", "");
+	
 		
 %>
-
-
 
 intercept().to("<%=uri%>")
