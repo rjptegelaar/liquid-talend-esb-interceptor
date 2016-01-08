@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.pte.liquid.relay</groupId>
 		<artifactId>liquid-parent</artifactId>
-		<version>0.0.2-SNAPSHOT</version>
+		<version>0.0.3</version>
 	</parent>
 	<build>
 		<finalName>cLiquidInterceptor</finalName>
@@ -128,7 +128,7 @@
 		<dependency>
 			<groupId>com.pte.liquid.relay</groupId>
 			<artifactId>liquid-relay-camel</artifactId>
-			<version>0.0.8-SNAPSHOT</version>
+			<version>0.0.8</version>
 		</dependency>
 		<dependency>
 			<groupId>aopalliance</groupId>
