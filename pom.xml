@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.pte.liquid.relay</groupId>
 		<artifactId>liquid-parent</artifactId>
-		<version>0.0.3</version>
+		<version>0.0.4</version>
 	</parent>
 	<build>
 		<finalName>cLiquidInterceptor</finalName>
@@ -128,7 +128,7 @@
 		<dependency>
 			<groupId>com.pte.liquid.relay</groupId>
 			<artifactId>liquid-relay-camel</artifactId>
-			<version>0.0.8</version>
+			<version>0.0.9</version>
 		</dependency>
 		<dependency>
 			<groupId>aopalliance</groupId>
@@ -144,9 +144,8 @@
   </scm>
 	<distributionManagement>
 		<repository>
-			<id>pte-releases</id>
-			<name>internal releases</name>
-			<url>${releases-url}</url>
+			<id>bintray</id>
+			<url>https://api.bintray.com/maven/paultegelaar/maven/liquid-talend-esb-interceptor</url>
 		</repository>
 		<snapshotRepository>
 			<id>pte-snapshots</id>
@@ -154,4 +153,11 @@
 			<url>${snapshots-url}</url>
 		</snapshotRepository>
 	</distributionManagement>
+	<url>https://github.com/rjptegelaar/liquid-talend-esb-interceptor</url>
+	<issueManagement>
+		<url>https://github.com/rjptegelaar/liquid-talend-esb-interceptor/issues</url>
+	</issueManagement>
+		<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 </project>
