@@ -45,4 +45,4 @@
 			
 %>
 
-intercept().to("liquid://?enabled="+<%=enabled%>+"&port="+<%=port%>+"")
+intercept().to("liquid://?destination=com.pte.liquid.relay.json.in&enabled="+<%=enabled%>+"&port="+<%=port%>+"")
