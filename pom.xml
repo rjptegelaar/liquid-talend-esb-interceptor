@@ -127,12 +127,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.pte.liquid.relay</groupId>
-			<artifactId>liquid-relay-camel</artifactId>
-			<version>0.0.10-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>aopalliance</groupId>
-			<artifactId>aopalliance</artifactId>
+			<artifactId>liquid-relay-camel-simple</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	<packaging>pom</packaging>
