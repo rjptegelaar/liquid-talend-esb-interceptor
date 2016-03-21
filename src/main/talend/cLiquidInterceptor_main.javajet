@@ -24,7 +24,9 @@
 	if(param != null && !"__UNIQUE_NAME__".equals(param.getValue())){
 		cid = (String)param.getValue()+"_"+cid;	
 	}
-				
+			
+	String destination = ElementParameterParser.getValue(node, "__Destination__");
+	String hostname = ElementParameterParser.getValue(node, "__Hostname__");			
 	String port = ElementParameterParser.getValue(node, "__Port__").replaceAll("^\"|\"$", "");
 	int logging = Integer.parseInt(ElementParameterParser.getValue(node, "__Logging__"));
 	
@@ -42,7 +44,9 @@
 			enabled = ElementParameterParser.getValue(node, "__ContextValue__");		
 		break;		
 	}
+	
+	
 			
 %>
-
-intercept().to("liquid://?destination=com.pte.liquid.relay.json.in&enabled="+<%=enabled%>+"&port="+<%=port%>+"")
+org.apache.camel.Processor liquidProcessor = com.pte.liquid.relay.camel.processor.LiquidRelayProcessor.getInstance(<%=enabled%>,"<%=destination%>","<%=hostname%>","<%=port%>");
+intercept().process(liquidProcessor)
