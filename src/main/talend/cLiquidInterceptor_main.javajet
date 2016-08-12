@@ -51,5 +51,4 @@
 	
 			
 %>
-
-intercept().bean(com.pte.liquid.relay.camel.bean.LiquidRelayBean.getInstance(<%=enabled%>,"<%=destination%>","<%=hostname%>",<%=port%>), "process")
+intercept().bean(com.pte.liquid.relay.camel.converter.LiquidRelayExchangeConverterImpl(), "convertExchange").to("stomp:queue:<%=destination%>?brokerURL=tcp://<%=hostname%>:<%=port%>").

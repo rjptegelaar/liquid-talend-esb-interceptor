@@ -16,6 +16,10 @@
 	<!-- When matching DataSeriesBodyType: do nothing -->
 	<xsl:template match="IMPORTS">
 		<IMPORTS>
+			<IMPORT MODULE_GROUP="camel-core" REQUIRED="true" />
+            <IMPORT MODULE_GROUP="camel-spring" REQUIRED="true" />
+            <IMPORT MODULE_GROUP="camel-stomp" REQUIRED="true" />
+            <IMPORT MODULE_GROUP="camel-gson" REQUIRED="true" />                        
 			<xsl:apply-templates select="$deps/list/dep" />
 		</IMPORTS>
 	</xsl:template>
