@@ -15,11 +15,7 @@
 
 	<!-- When matching DataSeriesBodyType: do nothing -->
 	<xsl:template match="IMPORTS">
-		<IMPORTS>
-			<IMPORT MODULE_GROUP="camel-core" REQUIRED="true" />
-            <IMPORT MODULE_GROUP="camel-spring" REQUIRED="true" />
-			<IMPORT MODULE_GROUP="camel-stomp-alldep" REQUIRED="true"/>
-			<IMPORT MODULE_GROUP="camel-gson-alldep" REQUIRED="true"/>                      
+		<IMPORTS>                 
 			<xsl:apply-templates select="$deps/list/dep" />
 		</IMPORTS>
 	</xsl:template>
