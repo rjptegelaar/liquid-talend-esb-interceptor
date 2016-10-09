@@ -53,4 +53,4 @@
 %>
 
 
-intercept().bean(com.pte.liquid.relay.camel.bean.LiquidRelayBean.getInstance(<%=enabled%>,"<%=destination%>","<%=hostname%>",<%=port%>), "process")
+bean(com.pte.liquid.relay.camel.bean.LiquidRelayBean.getInstance(<%=enabled%>,"<%=destination%>","<%=hostname%>",<%=port%>), "process")
