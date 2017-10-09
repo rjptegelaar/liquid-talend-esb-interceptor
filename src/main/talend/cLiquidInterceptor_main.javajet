@@ -33,6 +33,10 @@
 	
 	int logging = Integer.parseInt(ElementParameterParser.getValue(node, "__Logging__"));
 	
+	String queueSize = ElementParameterParser.getValue(node, "__QueueSize__").replaceAll("^\"|\"$", "");
+	
+	String queueThreshold = ElementParameterParser.getValue(node, "__QueueThreshold__").replaceAll("^\"|\"$", "");
+	
 	String enabled = "false";
 	
 	
@@ -53,4 +57,4 @@
 %>
 
 
-.bean(com.pte.liquid.relay.camel.bean.LiquidRelayBean.getInstance(<%=enabled%>,"<%=destination%>","<%=hostname%>",<%=port%>), "process")
+.to("liquid:<%=cid%>?queueSize=<%=queueSize%>&queueThreshold=<%=queueThreshold%>&hostname=<%=hostname%>&destination=<%=destination%>&port=<%=port%>&enabled=<%=enabled%>")

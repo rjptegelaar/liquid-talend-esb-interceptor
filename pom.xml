@@ -143,14 +143,19 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>nl.paultegelaar.liquid.relay</groupId>
-			<artifactId>liquid-relay-camel-simple</artifactId>
-			<version>1.0.4</version>
-		</dependency>
-		<dependency>
-			<groupId>nl.paultegelaar.liquid.relay</groupId>
-			<artifactId>RelayInterfaces</artifactId>
-			<version>1.0.1</version>
+		  <groupId>nl.paultegelaar.liquid.relay</groupId>
+		  <artifactId>liquid-relay-camel</artifactId>
+		  <version>1.0.4</version>
+		  <exclusions>
+		  	<exclusion>
+		  		<groupId>org.apache.camel</groupId>
+		  		<artifactId>camel-core</artifactId>
+		  	</exclusion>
+		  	<exclusion>
+		  		<groupId>org.apache.camel</groupId>
+		  		<artifactId>apt</artifactId>
+		  	</exclusion>
+		  </exclusions>
 		</dependency>
 	</dependencies>
 	<packaging>pom</packaging>
